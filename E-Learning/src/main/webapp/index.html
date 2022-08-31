@@ -1,33 +1,132 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-<style>
-  .header {
-        width: 100%;
-		height: 200px;
-        background-color: teal;
-		text-align: center;
-      }
-	  h1 {
-	     padding-top: 50px;
-	     font-size: 25px;
-		 font-family: cursive;
-		 color: white;		 
-	  }	  
-</style>
-</head>
-<body bgcolor="pink">
- <div class="header"/>
-<h1>Welcome to E-Learning</h1>
-<p>"Teaching in the Internet age means we must teach tomorrow's skills today."</p>
-<select name ="type">
-<option value="login">Login</option>
-<option value="register">Register</option>
+	<meta charset="UTF-8">
+    <title>My Awesome Websites</title>
 
-</select>
-<input type = "Submit" value ="Submit">
+    <!-- attach our stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- the header -->
+    <header>
+
+        <!-- our main logo -->
+        <a id="logo" href="index.html">
+            <img src="img/coforge.png" alt="Logo">
+            <span>My Website</span>
+        </a>
+
+        <!-- main navigation links -->
+        <nav>
+            <ul>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Sign Up</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- the content -->
+    <main>
+
+        <!-- hero content -->
+        <div class="hero">
+            <!-- content for the hero -->
+            <div class="hero-content">
+                <h1 class="hero-title">E-Learning Website</h1>
+                <img src="img/coforge.png">
+
+                <p>The best and most comprehensive website ever.</p>
+
+                <a href="#">Login</a>
+                <a href="#">Sign Up</a>
+            </div>
+        </div>
+
+        <!-- features section -->
+        <div class="site-section">
+        <div class="site-section-inside">
+
+            <div class="section-header">
+                <h2>Key Features</h2>
+            </div>
+
+            <div class="feature-box">
+                <img src="img/like.png" alt="Easy to Use">
+                <h5>Easy to Use</h5>
+                <p>Just think of how easy this is to use. Toddlers can do it. So can you!</p>
+            </div>
+
+            <div class="feature-box">
+                <img src="img/faces.png" alt="Fun to Use">
+                <h5>Fun to Use</h5>
+                <p>Just think of how easy this is to use. Toddlers can do it. So can you!</p>
+            </div>
+
+            <div class="feature-box">
+                <img src="img/heart.png" alt="Fun to Use">
+                <h5>You'll Love It</h5>
+                <p>Just think of how easy this is to use. Toddlers can do it. So can you!</p>
+            </div>
+
+        </div>
+        </div>
+
+        <!-- testimonials section -->
+        <div class="site-section site-section-secondary">
+        <div class="site-section-inside">
+
+            <div class="section-header">
+                <h2>What the people say</h2>
+            </div>
+
+            <div class="testimonial-box">
+                <div class="testimonial-content">
+                    Their service is by far the most influential I've ever seen.
+                </div>
+                <div class="testimonial-author">
+                    <img src="img/Sudhir Singh.png" alt="Sudhir Singh">
+                    <h5>Sudhir Singh</h5>
+                    <span>CEO</span>
+                </div>
+            </div>
+
+            <div class="testimonial-box">
+                <div class="testimonial-content">
+                    Their service is by far the most influential I've ever seen.
+                </div>
+                <div class="testimonial-author">
+                    <img src="img/cofounder.jpg" alt="Vijay K. Thadani">
+                    <h5>Vijay K. Thadani</h5>
+                    <span>Co-Founder</span>
+                </div>
+            </div>
+
+            <div class="testimonial-box">
+                <div class="testimonial-content">
+                    Their service is by far the most influential I've ever seen.
+                </div>
+                <div class="testimonial-author">
+                    <img src="img/chairman.jpg" alt="Rajendra Singh Pawar">
+                    <h5>Rajendra Singh Pawar</h5>
+                    <span>Chaiman</span>
+                </div>
+            </div>
+
+        </div>
+        </div>
+
+    </main>
+
+    <!-- the footer -->
+    <footer>
+        <img src="img/coforge.png" alt="Footer Logo">
+        <span>My Website<br>Copyright &copy; 2016-3010 </span>
+    </footer>
 
 </body>
 </html>
