@@ -77,6 +77,19 @@
     width: 80px;
     margin: 0 auto 10px;
   }
+  .parallax {
+    /* The image used */
+      background-image: url('../img/sky.jpg');
+    
+    /* Set a specific height */
+      min-height: 100%;
+    
+    /* Create the parallax scrolling effect */
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
   
   /* styling our main content */
   .hero           {
