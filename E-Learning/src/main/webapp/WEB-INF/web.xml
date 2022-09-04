@@ -10,5 +10,14 @@
     <welcome-file>default.jsp</welcome-file>
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
+  <servlet>
+  <servlet-name>Service</servlet-name>
+  <servlet-class>com.elearning.project.ResgisterServlet</servlet-class>
+   
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>Service</servlet-name>
+  <url-pattern>/RegisterServlet</url-pattern>
+  </servlet-mapping>
 
 </web-app>
