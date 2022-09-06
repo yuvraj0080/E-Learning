@@ -1,17 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+ 
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/login.css">
+ 
+  <!-- jQuery CDN Link -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>Transparent form</title>
 </head>
+ 
 <body>
-<form action ="Login" method=post>
-Login page
-<br>
-Enter your User Name<input type = textbox name="text1"></input> <br>
-Enter your Password : - <input type = password name="text2"></input>
-<br>
-<input type = submit>
-</form>
-</body>
-</html>
+  <div class="container">
+    <div class="form">
+      <div class="btn">
+        <button class="signUpBtn">Admin</button>
+        <button class="btnone"> <a href="Registration.html" style="color: yellow">Sign up</a></button>
+      </div>
+
+      <form class="signUp" action="Login" method="post">
+        <div class="formGroup">
+          <input type="text" name="txtname" id="username" placeholder="User Name" autocomplete="off">
+        </div>
+        
+        <div class="formGroup">
+          <input type="password" name="txtpass" id="password" placeholder="Password" required autocomplete="off">
+        </div>
+        
+        <div class="checkBox">
+          <input type="checkbox" name="checkbox" id="checkbox">
+          <span class="text">I agree with term & conditions</span>
+        </div>
+        <div class="formGroup">
+          <button type="submit" class="btn2">Login</button>
+        </div>
+        
+ 
+      </form>
+            </div>
+      </div>
