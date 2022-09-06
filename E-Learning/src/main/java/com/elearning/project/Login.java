@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.Statement;
 
 import javax.servlet.RequestDispatcher;
@@ -39,7 +40,7 @@ public class Login extends HttpServlet {
         String URL="jdbc:mysql://localhost:3306/elearning";
         
         PrintWriter out = response.getWriter();
-        
+        boolean status=false;
         try
         {
         Class.forName("com.mysql.cj.jdbc.Driver");  //load the driver
@@ -58,11 +59,24 @@ public class Login extends HttpServlet {
 
         String password=request.getParameter("txtpass");
 
+        PreparedStatement preparedStatement = conn.prepareStatement("select * from signup where username ='"+username+"'  and password ="+"md5('" + password +"')" );
+        ResultSet rs = preparedStatement.executeQuery();
+        status = rs.next();
+        if(status==true) {
         String sql= "insert into login values('" + username + "',"+"md5('" + password +"'))";
         s.executeUpdate(sql);
         out.println("Login SuccessFully");
-        
+        RequestDispatcher rd=request.getRequestDispatcher("index.html");
 
+        rd.include(request,response);
+        
+        }
+        else {
+        	out.println("<h1>You are not a valid user please register<h1>");
+            RequestDispatcher rd=request.getRequestDispatcher("Registration.html");
+
+            rd.include(request,response);
+        }
 	}
         catch(Exception e)
         {
@@ -83,9 +97,9 @@ public class Login extends HttpServlet {
 
         PrintWriter out=response.getWriter();
 
-        RequestDispatcher rd=request.getRequestDispatcher("index.html");
+        //RequestDispatcher rd=request.getRequestDispatcher("index.html");
 
-        rd.include(request,response);
+        //rd.include(request,response);
 	}
 
 }
