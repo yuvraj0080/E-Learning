@@ -34,7 +34,7 @@ public class ResgisterServlet extends HttpServlet {
         {
         Class.forName("com.mysql.cj.jdbc.Driver");  //load the driver
         
-        Connection conn = DriverManager.getConnection(URL,"root","Root@2606");
+        Connection conn = DriverManager.getConnection(URL,"root","Vikas@2001");
         
         
        

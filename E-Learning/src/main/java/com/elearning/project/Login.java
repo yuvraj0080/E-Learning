@@ -45,7 +45,7 @@ public class Login extends HttpServlet {
         {
         Class.forName("com.mysql.cj.jdbc.Driver");  //load the driver
         
-        Connection conn = DriverManager.getConnection(URL,"root","Root@2606");
+        Connection conn = DriverManager.getConnection(URL,"root","Vikas@2001");
         
         
        
@@ -63,7 +63,7 @@ public class Login extends HttpServlet {
         ResultSet rs = preparedStatement.executeQuery();
         status = rs.next();
         if(status==true) {
-        String sql= "insert into login values('" + username + "',"+"md5('" + password +"'))";
+        String sql= "insert into login1 values('" + username + "',"+"md5('" + password +"'))";
         s.executeUpdate(sql);
         out.println("Login SuccessFully");
         RequestDispatcher rd=request.getRequestDispatcher("index.html");
